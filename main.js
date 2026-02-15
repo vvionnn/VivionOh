@@ -1,39 +1,34 @@
-// footer year
+// year
 const year = document.getElementById("year");
 if (year) year.textContent = new Date().getFullYear();
 
-// image zoom modal
+// Zoom modal
 const zoomModal = document.getElementById("zoomModal");
-const zoomClose = document.getElementById("zoomClose");
 const zoomImg = document.getElementById("zoomImg");
+const zoomClose = document.getElementById("zoomClose");
 
-function openZoom(src, alt) {
+function openZoom(src, alt){
+  zoomModal.classList.add("open");
   zoomImg.src = src;
   zoomImg.alt = alt || "Zoomed preview";
-  zoomModal.classList.add("show");
-  zoomModal.setAttribute("aria-hidden", "false");
   document.body.style.overflow = "hidden";
 }
 
-function closeZoom() {
-  zoomModal.classList.remove("show");
-  zoomModal.setAttribute("aria-hidden", "true");
+function closeZoom(){
+  zoomModal.classList.remove("open");
   zoomImg.src = "";
   document.body.style.overflow = "";
 }
 
-document.querySelectorAll(".zoomable").forEach(img => {
-  img.addEventListener("click", () => openZoom(img.src, img.alt));
+zoomClose?.addEventListener("click", closeZoom);
+zoomModal?.addEventListener("click", (e) => {
+  if (e.target === zoomModal) closeZoom();
 });
 
-if (zoomClose) zoomClose.addEventListener("click", closeZoom);
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeZoom();
+});
 
-if (zoomModal) {
-  zoomModal.addEventListener("click", (e) => {
-    if (e.target === zoomModal) closeZoom();
-  });
-}
-
-window.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && zoomModal.classList.contains("show")) closeZoom();
+document.querySelectorAll(".zoomable").forEach(img => {
+  img.addEventListener("click", () => openZoom(img.src, img.alt));
 });
