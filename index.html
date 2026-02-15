@@ -1,3 +1,4 @@
+<!-- index.html (FULL) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,9 +28,8 @@
     </div>
   </header>
 
-  <!-- HERO (left/right big text + animated blobs) -->
+  <!-- HERO -->
   <main id="home" class="hero">
-
     <!-- animated “flower/blobs” -->
     <div class="flowerLayer" aria-hidden="true">
       <div class="flower f1"></div>
@@ -76,7 +76,7 @@
   <section id="projects" class="section">
     <div class="wrap">
       <h2 class="sectionTitle">Projects</h2>
-      <p class="sectionSub">Click screenshots to zoom. Videos are optional.</p>
+      <p class="sectionSub">Click screenshots to zoom. Demo link opens in a new tab.</p>
 
       <!-- Project 1 -->
       <article class="proj">
@@ -98,24 +98,25 @@
           <li>Integrated image moderation API to support safer user-generated content.</li>
         </ul>
 
-<div class="shots shots4">
-  <img class="shot zoomable" src="images/legacygarden1.png" alt="Legacy Garden screenshot 1">
-  <img class="shot zoomable" src="images/legacygarden2.png" alt="Legacy Garden screenshot 2">
-  <img class="shot zoomable" src="images/legacy-3.png" alt="Legacy Garden screenshot 3">
-  <img class="shot zoomable" src="images/legacy-4.png" alt="Legacy Garden screenshot 4">
-</div>
+        <!-- 4 images in 1 row -->
+        <div class="shots">
+          <img class="shot zoomable" src="images/legacygarden1.png" alt="Legacy Garden screenshot 1">
+          <img class="shot zoomable" src="images/legacygarden2.png" alt="Legacy Garden screenshot 2">
+          <img class="shot zoomable" src="images/legacy-3.png" alt="Legacy Garden screenshot 3">
+          <img class="shot zoomable" src="images/legacy-4.png" alt="Legacy Garden screenshot 4">
+        </div>
 
-<a class="linkbox"
-   href="https://drive.google.com/file/d/1EquOR-XBm2mORFzDsLOHzB1nbfDX1_iH/view?usp=sharing"
-   target="_blank"
-   rel="noreferrer">
-  <div class="linkbox-left">
-    <div class="linkbox-title">Watch Demo Video</div>
-    <div class="linkbox-sub">Opens in a new tab</div>
-  </div>
-  <div class="linkbox-right">▶</div>
-</a>
-
+        <!-- obvious demo link bubble -->
+        <a class="demoCard"
+           href="https://drive.google.com/file/d/1EquOR-XBm2mORFzDsLOHzB1nbfDX1_iH/view?usp=sharing"
+           target="_blank"
+           rel="noreferrer">
+          <div class="demoIcon">▶</div>
+          <div class="demoText">
+            <div class="demoTitle">Watch Demo Video</div>
+            <div class="demoSub">Opens in a new tab</div>
+          </div>
+        </a>
       </article>
 
       <!-- Project 2 -->
@@ -140,17 +141,19 @@
           <img class="shot zoomable" src="images/dance-1.png" alt="Dance Revolution screenshot 1">
           <img class="shot zoomable" src="images/dance-2.png" alt="Dance Revolution screenshot 2">
           <img class="shot zoomable" src="images/dance-3.png" alt="Dance Revolution screenshot 3">
+          <img class="shot zoomable" src="images/dance-4.png" alt="Dance Revolution screenshot 4">
         </div>
 
-        <!-- OPTIONAL VIDEO -->
-        <div class="mediaRow">
-          <div class="videoWrap">
-            <video class="projVideo" controls preload="metadata" poster="images/dance-1.png">
-              <source src="videos/dance-demo.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        <a class="demoCard"
+           href="https://drive.google.com/file/d/YOUR_DANCE_FILE_ID/view?usp=sharing"
+           target="_blank"
+           rel="noreferrer">
+          <div class="demoIcon">▶</div>
+          <div class="demoText">
+            <div class="demoTitle">Watch Demo Video</div>
+            <div class="demoSub">Opens in a new tab</div>
           </div>
-        </div>
+        </a>
       </article>
 
       <!-- Project 3 -->
@@ -175,19 +178,20 @@
           <img class="shot zoomable" src="images/nirvana-1.png" alt="Nirvana screenshot 1">
           <img class="shot zoomable" src="images/nirvana-2.png" alt="Nirvana screenshot 2">
           <img class="shot zoomable" src="images/nirvana-3.png" alt="Nirvana screenshot 3">
+          <img class="shot zoomable" src="images/nirvana-4.png" alt="Nirvana screenshot 4">
         </div>
 
-        <!-- OPTIONAL VIDEO -->
-        <div class="mediaRow">
-          <div class="videoWrap">
-            <video class="projVideo" controls preload="metadata" poster="images/nirvana-1.png">
-              <source src="videos/nirvana-demo.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
+        <a class="demoCard"
+           href="https://www.figma.com/proto/YOUR_FIGMA_PROTO_LINK"
+           target="_blank"
+           rel="noreferrer">
+          <div class="demoIcon">↗</div>
+          <div class="demoText">
+            <div class="demoTitle">Open Figma Prototype</div>
+            <div class="demoSub">Opens in a new tab</div>
           </div>
-        </div>
+        </a>
       </article>
-
     </div>
   </section>
 
