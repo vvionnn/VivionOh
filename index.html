@@ -8,105 +8,252 @@
 </head>
 <body>
 
-<header class="navbar">
-  <div class="navInner">
-    <a class="brand" href="#home">
-      <span class="brandDot"></span>
-      Vivion
-    </a>
+  <!-- NAVBAR -->
+  <header class="navbar" role="banner">
+    <div class="navInner">
+      <a class="brand" href="#home" aria-label="Go to top">
+        <span class="brandDot"></span>
+        <span class="brandText">Vivion</span>
+      </a>
 
-    <nav class="navLinks">
-      <a href="#home">Home</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
+      <nav class="navLinks" aria-label="Primary navigation">
+        <a href="#home" class="navLink">Home</a>
+        <a href="#projects" class="navLink">Projects</a>
+        <a href="#skills" class="navLink">Skills</a>
+        <a href="#contact" class="navLink">Contact</a>
+      </nav>
 
-    <a class="navCta" href="#projects">View Work</a>
-  </div>
-</header>
-
-<main id="home" class="hero">
-
-  <!-- 🌸 Visible animated blobs -->
-  <div class="flowerLayer">
-    <div class="flower f1"></div>
-    <div class="flower f2"></div>
-    <div class="flower f3"></div>
-    <div class="flower f4"></div>
-  </div>
-
-  <section class="heroContent">
-    <div class="heroLeft">
-      <h1 class="heroName">VIVION<br>OH</h1>
-      <p class="heroMeta">Software Developer • UI/UX Designer • Web Developer</p>
-      <p class="heroSub">Building user-focused web applications and interfaces with clear workflows.</p>
-
-      <div class="heroBtns">
-        <a class="btn primary" href="#projects">View Projects</a>
-        <a class="btn ghost" href="#contact">Get in Touch</a>
-      </div>
+      <a class="navCta" href="#projects">View Work</a>
     </div>
+  </header>
 
-    <div class="heroRight">
-      SOFTWARE<br>DEVELOPER
+  <!-- HERO -->
+  <main id="home" class="hero">
+
+    <!-- animated “flower/blobs” -->
+    <div class="flowerLayer" aria-hidden="true">
+      <div class="flower f1"></div>
+      <div class="flower f2"></div>
+      <div class="flower f3"></div>
+      <div class="flower f4"></div>
+    </div>
+    <div class="vignette" aria-hidden="true"></div>
+
+    <section class="heroContent">
+      <div class="heroLeft">
+        <div class="nameBlock">
+          <div class="nameTop">VIVION</div>
+          <div class="nameBottom">OH</div>
+        </div>
+
+        <div class="heroMeta">
+          <p class="metaLine">Software Developer • UI/UX Designer • Web Developer</p>
+          <p class="metaLine muted">Building user-focused web applications and interfaces with clear workflows.</p>
+
+          <div class="heroCtas">
+            <a class="cta primary" href="#projects">View Projects</a>
+            <a class="cta ghost" href="#contact">Get in Touch</a>
+          </div>
+
+          <div class="pillRow">
+            <span class="pill">Flask</span>
+            <span class="pill">Python</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="heroRight">
+        <div class="roleBlock">
+          <div class="roleTop">SOFTWARE</div>
+          <div class="roleBottom">DEVELOPER</div>
+        </div>
+      </div>
+
+      <div class="scrollHint">SCROLL</div>
+    </section>
+  </main>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <div class="wrap">
+      <h2 class="sectionTitle">Projects</h2>
+      <p class="sectionSub">Click screenshots to zoom. Demo opens in a new tab.</p>
+
+      <!-- Project 1 -->
+      <article class="proj">
+        <div class="projHead">
+          <div>
+            <div class="projTitle">Legacy Garden</div>
+            <div class="projSub">Web App • Seniors × Youth digital storytelling</div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">Jinja</span>
+            <span class="tag">Image Moderation API</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li>Built story-sharing and engagement flows to support meaningful intergenerational interaction.</li>
+          <li>Implemented reward-based progression to motivate participation and continued use.</li>
+          <li>Integrated image moderation API to support safer user-generated content.</li>
+        </ul>
+
+        <!-- 4 images in one row -->
+        <div class="shots">
+          <img class="shot zoomable" src="images/legacygarden1.png" alt="Legacy Garden screenshot 1">
+          <img class="shot zoomable" src="images/legacygarden2.png" alt="Legacy Garden screenshot 2">
+          <img class="shot zoomable" src="images/legacy-3.png" alt="Legacy Garden screenshot 3">
+          <img class="shot zoomable" src="images/legacy-4.png" alt="Legacy Garden screenshot 4">
+        </div>
+
+        <!-- demo link bubble -->
+        <a class="demoCard"
+           href="https://drive.google.com/file/d/1EquOR-XBm2mORFzDsLOHzB1nbfDX1_iH/view?usp=sharing"
+           target="_blank"
+           rel="noreferrer">
+          <div class="demoIcon">▶</div>
+          <div class="demoText">
+            <div class="demoTitle">Watch Demo Video</div>
+            <div class="demoSub">Opens in a new tab</div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="proj">
+        <div class="projHead">
+          <div>
+            <div class="projTitle">Dance Revolution</div>
+            <div class="projSub">Front-end website • CCA promotion & sign-up flow</div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li>Designed a clean multi-page interface to showcase the CCA and events.</li>
+          <li>Added interactive UI elements to improve navigation and engagement.</li>
+          <li>Implemented a simple sign-up flow with validation and user feedback.</li>
+        </ul>
+
+        <div class="shots">
+          <img class="shot zoomable" src="images/dance-1.png" alt="Dance Revolution screenshot 1">
+          <img class="shot zoomable" src="images/dance-2.png" alt="Dance Revolution screenshot 2">
+          <img class="shot zoomable" src="images/dance-3.png" alt="Dance Revolution screenshot 3">
+          <img class="shot zoomable" src="images/dance-4.png" alt="Dance Revolution screenshot 4">
+        </div>
+
+        <a class="demoCard"
+           href="https://drive.google.com/file/d/YOUR_DANCE_FILE_ID/view?usp=sharing"
+           target="_blank"
+           rel="noreferrer">
+          <div class="demoIcon">▶</div>
+          <div class="demoText">
+            <div class="demoTitle">Watch Demo Video</div>
+            <div class="demoSub">Opens in a new tab</div>
+          </div>
+        </a>
+      </article>
+
+      <!-- Project 3 -->
+      <article class="proj">
+        <div class="projHead">
+          <div>
+            <div class="projTitle">Nirvana Mobile (UI/UX – Figma)</div>
+            <div class="projSub">UI/UX concept • service flow improvement</div>
+          </div>
+
+          <div class="tags">
+            <span class="tag">Figma</span><span class="tag">UI/UX</span>
+          </div>
+        </div>
+
+        <ul class="bullets">
+          <li>Designed key screens and a clearer user journey to reduce friction in service flow.</li>
+          <li>Improved information hierarchy for readability and decision-making.</li>
+          <li>Created consistent UI components for a cleaner, modern interface.</li>
+        </ul>
+
+        <div class="shots">
+          <img class="shot zoomable" src="images/nirvana-1.png" alt="Nirvana screenshot 1">
+          <img class="shot zoomable" src="images/nirvana-2.png" alt="Nirvana screenshot 2">
+          <img class="shot zoomable" src="images/nirvana-3.png" alt="Nirvana screenshot 3">
+          <img class="shot zoomable" src="images/nirvana-4.png" alt="Nirvana screenshot 4">
+        </div>
+
+        <a class="demoCard"
+           href="https://www.figma.com/proto/YOUR_FIGMA_PROTO_LINK"
+           target="_blank"
+           rel="noreferrer">
+          <div class="demoIcon">↗</div>
+          <div class="demoText">
+            <div class="demoTitle">Open Figma Prototype</div>
+            <div class="demoSub">Opens in a new tab</div>
+          </div>
+        </a>
+      </article>
+
     </div>
   </section>
-</main>
 
-<!-- PROJECTS -->
-<section id="projects" class="section">
-  <div class="wrap">
-    <h2 class="sectionTitle">Projects</h2>
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <h2 class="sectionTitle">Skills</h2>
+      <p class="sectionSub">Tools & platforms used across projects and coursework.</p>
 
-    <article class="proj">
-      <div class="projTitle">Legacy Garden</div>
+      <div class="skillGrid">
+        <div class="skillCard"><div class="skillTitle">Web</div><div class="skillLine">HTML • CSS • JavaScript</div></div>
+        <div class="skillCard"><div class="skillTitle">Backend</div><div class="skillLine">Python • Flask • Jinja</div></div>
+        <div class="skillCard"><div class="skillTitle">Design</div><div class="skillLine">Figma • UI/UX</div></div>
+        <div class="skillCard"><div class="skillTitle">Tools</div><div class="skillLine">GitHub • GitLab • Power BI</div></div>
+        <div class="skillCard"><div class="skillTitle">Productivity</div><div class="skillLine">Word • Excel • PowerPoint</div></div>
+        <div class="skillCard"><div class="skillTitle">Other</div><div class="skillLine">Scratch (prototype/simulation)</div></div>
+      </div>
+    </div>
+  </section>
 
-      <!-- 4 images row -->
-      <div class="shots">
-        <img class="shot zoomable" src="images/legacygarden1.png">
-        <img class="shot zoomable" src="images/legacygarden2.png">
-        <img class="shot zoomable" src="images/legacy-3.png">
-        <img class="shot zoomable" src="images/legacy-4.png">
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="contactCard">
+        <h2 class="sectionTitle">Get in Touch</h2>
+        <p class="sectionSub">Internships • collaborations • project discussions</p>
+
+        <div class="contactGrid">
+          <a class="contactItem" href="mailto:youremail@example.com">
+            <div class="cLabel">Email</div>
+            <div class="cValue">youremail@example.com</div>
+          </a>
+          <a class="contactItem" target="_blank" rel="noopener" href="https://github.com/vvionnn">
+            <div class="cLabel">GitHub</div>
+            <div class="cValue">github.com/vvionnn</div>
+          </a>
+          <a class="contactItem" target="_blank" rel="noopener" href="#">
+            <div class="cLabel">LinkedIn</div>
+            <div class="cValue">Add link</div>
+          </a>
+        </div>
       </div>
 
-      <!-- Demo card -->
-      <a class="demoCard"
-         href="https://drive.google.com/file/d/1EquOR-XBm2mORFzDsLOHzB1nbfDX1_iH/view?usp=sharing"
-         target="_blank">
-        <div class="demoIcon">▶</div>
-        <div>
-          <div class="demoTitle">Watch Demo Video</div>
-          <div class="demoSub">Opens in a new tab</div>
-        </div>
-      </a>
-    </article>
-  </div>
-</section>
+      <footer class="footer">© <span id="year"></span> Vivion Oh</footer>
+    </div>
+  </section>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <div class="wrap">
-    <h2 class="sectionTitle">Skills</h2>
-    <p>HTML • CSS • JavaScript • Python • Flask • Figma • GitHub</p>
+  <!-- ZOOM MODAL -->
+  <div class="zoomModal" id="zoomModal" aria-hidden="true">
+    <button class="zoomClose" id="zoomClose" aria-label="Close">×</button>
+    <div class="zoomInner">
+      <img id="zoomImg" class="zoomImg" alt="Zoomed preview"/>
+    </div>
   </div>
-</section>
 
-<!-- CONTACT -->
-<section id="contact" class="section">
-  <div class="wrap">
-    <h2 class="sectionTitle">Contact</h2>
-    <p>Email: youremail@example.com</p>
-  </div>
-</section>
-
-<!-- ZOOM -->
-<div class="zoomModal" id="zoomModal">
-  <div class="zoomInner">
-    <img id="zoomImg">
-  </div>
-</div>
-
-<script src="main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
