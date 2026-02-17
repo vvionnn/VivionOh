@@ -443,21 +443,3 @@ a{color:inherit;text-decoration:none}
   display:block;
   max-height:86vh;
 }
-/* Modal header + description */
-.zoomMeta{
-  padding: 14px 16px;
-  border-bottom: 1px solid rgba(255,255,255,.10);
-  background: rgba(255,255,255,.03);
-}
-.zoomTitle{
-  font-weight: 980;
-  letter-spacing: -.2px;
-  font-size: 14px;
-}
-.zoomDesc{
-  margin-top: 6px;
-  color: rgba(243,244,255,.70);
-  font-weight: 700;
-  line-height: 1.45;
-  font-size: 13px;
-}
