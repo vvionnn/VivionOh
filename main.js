@@ -16,14 +16,16 @@ function openZoom(src, alt, title, desc){
   zoomImg.alt = alt || "Zoomed preview";
 
   const zoomTitle = document.getElementById("zoomTitle");
-  const zoomDesc = document.getElementById("zoomDesc");
 
   if (zoomTitle) zoomTitle.textContent = title || "";
+const zoomDesc = document.getElementById("zoomDesc");
 
-  if (zoomDesc && desc) {
-    const points = desc.split("|");
-    zoomDesc.innerHTML = points.map(p => `<li>${p.trim()}</li>`).join("");
-  }
+if (zoomDesc && desc) {
+  const lines = desc.split("\\n"); // important: double slash
+  zoomDesc.innerHTML = lines
+    .map(line => `<li>${line.trim()}</li>`)
+    .join("");
+}
 
   document.body.style.overflow = "hidden";
 }
