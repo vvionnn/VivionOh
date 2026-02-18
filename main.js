@@ -10,29 +10,24 @@ const zoomTitle = document.getElementById("zoomTitle");
 const zoomDesc = document.getElementById("zoomDesc");   
 const zoomHeader = document.getElementById("zoomHeader");
 const zoomFooter = document.getElementById("zoomFooter");
-function openZoom(src, alt, title, desc) {
-    zoomModal.classList.add("open");
-    zoomImg.src = src;
-    zoomImg.alt = alt || "Zoomed preview";
+function openZoom(src, alt, title, desc){
+  zoomModal.classList.add("open");
+  zoomImg.src = src;
+  zoomImg.alt = alt || "Zoomed preview";
 
-    // 1. Handle Title (Top)
-    if (title) {
-        zoomHeader.style.display = "block";
-        zoomTitle.textContent = title;
-    } else {
-        zoomHeader.style.display = "none";
-    }
+  const zoomTitle = document.getElementById("zoomTitle");
+  const zoomDesc = document.getElementById("zoomDesc");
 
-    // 2. Handle Description (Bottom)
-    if (desc) {
-        zoomFooter.style.display = "block";
-        zoomDesc.textContent = desc;
-    } else {
-        zoomFooter.style.display = "none";
-    }
+  if (zoomTitle) zoomTitle.textContent = title || "";
 
-    document.body.style.overflow = "hidden";
+  if (zoomDesc && desc) {
+    const points = desc.split("|");
+    zoomDesc.innerHTML = points.map(p => `<li>${p.trim()}</li>`).join("");
+  }
+
+  document.body.style.overflow = "hidden";
 }
+
 
 function closeZoom() {
     zoomModal.classList.remove("open");
@@ -57,7 +52,12 @@ document.addEventListener("keydown", (e) => {
 });
 
 document.querySelectorAll(".zoomable").forEach(img => {
-    img.addEventListener("click", () => {
-        openZoom(img.src, img.alt, img.dataset.title, img.dataset.desc);
-    });
+  img.addEventListener("click", () => {
+    openZoom(
+      img.src,
+      img.alt,
+      img.dataset.title,
+      img.dataset.desc
+    );
+  });
 });
